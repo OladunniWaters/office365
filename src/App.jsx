@@ -18,7 +18,6 @@ function App() {
         <HashRouter>
            <Routes>
                <Route exact path="/" element={<Outlook />} />
-               <Route  path="/Form" element={<Form />} />
           </Routes>
         </HashRouter>
      </div>  
