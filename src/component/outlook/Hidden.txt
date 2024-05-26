@@ -1,0 +1,11 @@
+const name = document.querySelector(".main-microsoft-div");
+function hideDiv() {
+    name.style.display = "none";
+}
+
+
+  <button 
+                       onClick={hideDiv}
+                       className='main-microsoft-nextBtn'>
+                       Next
+                    </button>
